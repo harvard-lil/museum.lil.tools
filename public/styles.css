@@ -66,10 +66,6 @@ body#home main h1 {
   }
 }
 
-body#home main h1 span {
-  display: block;
-}
-
 body#home main ul li {
   list-style-type: none;
   margin-bottom: 0.5rem;
