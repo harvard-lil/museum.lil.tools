@@ -1,0 +1,150 @@
+* {
+  padding: 0px;
+  box-sizing: border-box;   
+}
+
+html {
+  font-size: clamp(14px, 1.35vmax, 28px);
+  font-family: 'Courier New', Courier, monospace;
+  background-color: antiquewhite;
+  color: black;
+}
+
+p, ul {
+  line-height: 1.5rem;
+}
+
+a {
+  color: darkslategray;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.pill {
+  display: inline-block;
+  background-color: navajowhite;
+  padding: 0.15rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  border-radius: 0.25rem;
+  line-height: 1rem;
+}
+
+/* Homepage */
+body#home {
+  text-align: center;
+  display: flex;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+body#home main {
+  margin: auto;
+  max-width: 60ch;
+}
+
+body#home main h1 {
+  font-weight: normal;
+  letter-spacing: -0.1rem;
+}
+
+body#home main h1 span {
+  display: block;
+}
+
+body#home main ul li {
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+}
+
+/* Archive page */
+body#archive {
+  max-width: 90%;
+  margin: auto;
+  padding-bottom: 2rem;
+}
+
+body#archive header {
+  display: flex;
+  padding: 1rem;
+  padding-top: 1.5rem;
+  max-width: 90ch;
+  margin: auto;
+}
+
+body#archive header div {
+  margin: auto;
+}
+
+body#archive header div h1 {
+  font-weight: normal;
+  letter-spacing: -0.1rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 790px) {
+  body#archive header div h1 {
+    font-size: 1.85rem;
+  }
+}
+
+body#archive header div p {
+  line-height: 1.35rem;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.45rem;
+}
+
+body#archive header div p span {
+  display: inline-block;
+  background-color: navajowhite;
+  padding: 0.15rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  border-radius: 0.25rem;
+  line-height: 1rem;
+}
+
+body#archive header div fieldset {
+  border: 0px;
+  margin-bottom: 1rem;
+}
+
+body#archive header div fieldset legend {
+  padding-bottom: 0.25rem;
+}
+
+body#archive header div fieldset textarea {
+  width: 100%;
+  height: 8rem;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+}
+
+body#archive header div fieldset select {
+  padding: 0.25rem;
+  font-size: 0.75rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+body#archive header div fieldset button {
+  border: 0px;
+  background-color: darkslategray;
+  color: white;
+  padding: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  cursor: pointer;
+}
+
+body#archive iframe {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 8rem);
+  margin: auto;
+  border: 2px solid darkslategrey;
+  border-radius: 0.5rem;
+  background-color: white;
+}
