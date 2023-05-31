@@ -4,7 +4,7 @@
 }
 
 html {
-  font-size: clamp(14px, 1.35vmax, 28px);
+  font-size: clamp(16px, 1.35vmax, 28px);
   font-family: 'Courier New', Courier, monospace;
   background-color: antiquewhite;
   color: black;
@@ -40,6 +40,12 @@ body#home {
   min-height: 100vh;
 }
 
+@media (max-width: 790px) {
+  body#home {
+    display: block;
+  }
+}
+
 body#home main {
   margin: auto;
   max-width: 60ch;
@@ -48,6 +54,16 @@ body#home main {
 body#home main h1 {
   font-weight: normal;
   letter-spacing: -0.1rem;
+}
+
+@media (max-width: 790px) {
+  body#home main h1 {
+    text-align: center;
+  }
+
+  body#home main h1 span {
+    display: block;
+  }
 }
 
 body#home main h1 span {
