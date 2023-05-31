@@ -34,7 +34,7 @@ a:hover {
 
 /* Homepage */
 body#home {
-  text-align: center;
+  text-align: left;
   display: flex;
   padding: 1rem;
   min-height: 100vh;
