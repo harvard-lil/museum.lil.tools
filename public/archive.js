@@ -7,7 +7,7 @@
  * - https://museum.lil.tools/archive/h2obeta-law-harvard-edu.html?url=http://h2obeta.law.harvard.edu/222048
  */
 const playbackIframe = document.querySelector('iframe')
-const playbackOrigin = new URL(playbackIframe.src).origin
+const playbackOrigin = new URL(playbackIframe.src).origin // Will throw if iframe.src is not a valid url
 
 const currentUrl = new URLSearchParams(playbackIframe.getAttribute('src'))?.get('url')
 const redirectUrl = new URLSearchParams(window.location.search)?.get('url')
@@ -18,14 +18,14 @@ if (redirectUrl && redirectUrl !== currentUrl) {
 
   // Send url update when playback is ready. 
   // We know the playback is ready when it tells us so.
-  window.addEventListener("message", (e) => {
+  window.addEventListener('message', (e) => {
     if (urlWasUpdated === true) {
       return
     }
     
     if (e?.data && e.source === playbackIframe.contentWindow) {
       playbackIframe.contentWindow.postMessage(
-        {"updateUrl": redirectUrl},
+        {'updateUrl': redirectUrl},
         playbackOrigin
       )
 
