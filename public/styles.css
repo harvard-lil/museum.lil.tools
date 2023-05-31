@@ -70,8 +70,7 @@ body#archive header {
   display: flex;
   padding: 1rem;
   padding-top: 1.5rem;
-  max-width: 90ch;
-  margin: auto;
+  max-width: 65ch;
 }
 
 body#archive header div {
@@ -142,7 +141,7 @@ body#archive header div fieldset button {
 body#archive iframe {
   display: block;
   width: 100%;
-  height: calc(100vh - 8rem);
+  height: calc(100vh - 4rem);
   margin: auto;
   border: 2px solid darkslategrey;
   border-radius: 0.5rem;
