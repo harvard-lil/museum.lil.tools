@@ -32,8 +32,7 @@ a:hover {
   line-height: 1rem;
 }
 
-/* Homepage */
-body#home {
+body#home, body#caselaw {
   text-align: left;
   display: flex;
   padding: 1rem;
@@ -41,23 +40,23 @@ body#home {
 }
 
 @media (max-width: 790px) {
-  body#home {
+  body#home, body#caselaw {
     display: block;
   }
 }
 
-body#home main {
+body#home main, body#caselaw main {
   margin: auto;
   max-width: 60ch;
 }
 
-body#home main h1 {
+body#home main h1, , body#caselaw main h1 {
   font-weight: normal;
   letter-spacing: -0.1rem;
 }
 
 @media (max-width: 790px) {
-  body#home main h1 {
+  body#home main h1, body#caselaw main h1 {
     text-align: center;
   }
 
@@ -66,7 +65,7 @@ body#home main h1 {
   }
 }
 
-body#home main ul li {
+body#home main ul li, body#caselaw ul li {
   list-style-type: none;
   margin-bottom: 0.5rem;
 }
@@ -159,3 +158,14 @@ body#archive iframe {
   border-radius: 0.5rem;
   background-color: white;
 }
+
+#return-to-index {
+  margin-top: 1.5rem;
+}
+
+div#featured-timelines {
+  padding: 1rem;
+  padding-top: 1.5rem;
+}
+
+
