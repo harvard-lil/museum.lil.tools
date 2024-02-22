@@ -50,7 +50,7 @@ body#home main, body#caselaw main {
   max-width: 60ch;
 }
 
-body#home main h1, , body#caselaw main h1 {
+body#home main h1, body#caselaw main h1 {
   font-weight: normal;
   letter-spacing: -0.1rem;
 }
