@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="../../styles.css">
 
     <script type="module" src="../../archive.js"></script>
+
+    <script type="module">
+      // Navigate to selected timeline
+      document.querySelector("#featured-timelines + select").addEventListener("change", (e) => {
+        window.location.search = `?url=https://case.law/labs/chronolawgic/timeline/${e.target.value}`;
+      })
+    </script>
   </head>
 
   <body id="archive">
@@ -19,26 +26,25 @@
         <p>A legal timeline tool</p>
         <p><a href="./">👈  Back to the Caselaw Access Project index</a></p>
 
-        <div id="featured-timelines">
-          <h2>Featured Timelines</h2>
-          <ul>
-            <li><a href="?url=https://case.law/labs/chronolawgic/timeline/KYVxhhTcrH">Browns v. Boards</a></li>
-            <li><a href="?url=https://case.law/labs/chronolawgic/timeline/GgbsFL2CTr">Contracts</a></li>
-            <li><a href="?url=https://case.law/labs/chronolawgic/timeline/JoGzvZMv5h">Copyright Timeline</a></li>
-            <li><a href="?url=https://case.law/labs/chronolawgic/timeline/6YYCJgC8kC">Education</a></li>
-            <li><a href="?url=https://case.law/labs/chronolawgic/timeline/9mefPGMsNY">Environment</a></li>
-            <li><a href="?url=https://case.law/labs/chronolawgic/timeline/AjcYUXBp3i">H2O Landmark Case Collection</a></li>
-            <li><a href="?url=https://case.law/labs/chronolawgic/timeline/9Ndqcbiyoz">Health</a></li>
-            <li><a href="?url=https://case.law/labs/chronolawgic/timeline/EpoLjwiGnw">History of immigration law in United States</a></li>
-            <li><a href="?url=https://case.law/labs/chronolawgic/timeline/BYT82jF5od">Landmark Capital Punishment Cases</a></li>
-            <li><a href="?url=https://case.law/labs/chronolawgic/timeline/CapsatsyHA">Landmark Cases: Freedom of Speech and of the Press</a></li>
-            <li><a href="?url=https://case.law/labs/chronolawgic/timeline/3SzC2XsLQq">Landmark Decisions:
-            Discrimination Based on Race and Ethnicity</a></li>
-            <li><a href="?url=https://case.law/labs/chronolawgic/timeline/8AnwVUzpvw">Landmark Decisions: Discrimination Based on Sexual Orientation</a></li>
-            <li><a href="?url=https://case.law/labs/chronolawgic/timeline/K9T3GisHsC">The Legal History of Banana Peels</a></li>
-            <li><a href="?url=https://case.law/labs/chronolawgic/timeline/FLrNEuL4EM">The Legal History of Gerrymandering</a></li>
-          </ul>
-        </div>
+        <h2 id="featured-timelines">Featured Timelines</h2>
+        <select>
+          <option value="KYVxhhTcrH">Browns v. Boards</option>
+          <option value="GgbsFL2CTr">Contracts</option>
+          <option value="JoGzvZMv5h">Copyright Timeline</option>
+          <option value="6YYCJgC8kC">Education</option>
+          <option value="9mefPGMsNY">Environment</option>
+          <option value="AjcYUXBp3i">H2O Landmark Case Collection</option>>
+          <option value="9Ndqcbiyoz">Health</option>
+          <option value="EpoLjwiGnw">History of immigration law in United States</option>
+          <option value="BYT82jF5od">Landmark Capital Punishment Cases</option>
+          <option value="CapsatsyHA">Landmark Cases: Freedom of Speech and of the Press</option>
+          <option value="3SzC2XsLQq">Landmark Decisions:
+          Discrimination Based on Race and Ethnicity</option>
+          <option value="8AnwVUzpvw">Landmark Decisions: Discrimination Based on Sexual Orientation</option>
+          <option value="K9T3GisHsC">The Legal History of Banana Peels</option>
+          <option value="FLrNEuL4EM">The Legal History of Gerrymandering</option>
+        </select>
+
       </div>
     </header>
 

@@ -163,7 +163,11 @@ body#archive iframe {
   margin-top: 1.5rem;
 }
 
-div#featured-timelines {
-  padding: 1rem;
+#featured-timelines {
   padding-top: 1.5rem;
+}
+
+#featured-timelines + select {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
 }
