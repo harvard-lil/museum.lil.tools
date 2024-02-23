@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Chronolawgic | Caselaw Access Project | Harvard Library Innovation Lab Museum 🏛️</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow"/>
+
+    <link rel="stylesheet" href="../../styles.css">
+
+    <script type="module" src="../../archive.js"></script>
+
+    <script type="module">
+      // Navigate to selected timeline
+      document.querySelector("#featured-timelines + select").addEventListener("change", (e) => {
+        window.location.search = `?url=https://case.law/labs/chronolawgic/timeline/${e.target.value}`;
+      })
+
+      // If a timeline is selected, mark its `option` as selected
+      const searchParams = new URLSearchParams(window.location.search);
+      if (searchParams.get('url')){
+        const timeLineOption = document.querySelector(`option[value=${searchParams.get('url').split("/").pop()}]`);
+        timeLineOption.selected = true;
+      }
+    </script>
+  </head>
+
+  <body id="archive">
+
+    <header>
+      <div>
+        <h1>🏛️ Chronolawgic</h1>
+        <p>A legal timeline tool</p>
+        <p><a href="./">👈  Back to the Caselaw Access Project index</a></p>
+
+        <h2 id="featured-timelines">Featured Timelines</h2>
+        <select>
+          <option hidden disabled selected value> -- </option>
+          <option value="KYVxhhTcrH">Browns v. Boards</option>
+          <option value="GgbsFL2CTr">Contracts</option>
+          <option value="JoGzvZMv5h">Copyright Timeline</option>
+          <option value="6YYCJgC8kC">Education</option>
+          <option value="9mefPGMsNY">Environment</option>
+          <option value="AjcYUXBp3i">H2O Landmark Case Collection</option>>
+          <option value="9Ndqcbiyoz">Health</option>
+          <option value="EpoLjwiGnw">History of immigration law in United States</option>
+          <option value="BYT82jF5od">Landmark Capital Punishment Cases</option>
+          <option value="CapsatsyHA">Landmark Cases: Freedom of Speech and of the Press</option>
+          <option value="3SzC2XsLQq">Landmark Decisions:
+          Discrimination Based on Race and Ethnicity</option>
+          <option value="8AnwVUzpvw">Landmark Decisions: Discrimination Based on Sexual Orientation</option>
+          <option value="K9T3GisHsC">The Legal History of Banana Peels</option>
+          <option value="FLrNEuL4EM">The Legal History of Gerrymandering</option>
+        </select>
+
+      </div>
+    </header>
+
+    <iframe
+      src="https://museum-wacz.lil.tools/?source=timelines.wacz&show-location-bar=1"
+      allow="fullscreen"
+      sandbox="allow-scripts allow-modals allow-forms allow-same-origin allow-fullscreen"
+    ></iframe>
+
+  </body>
+
+</html>
